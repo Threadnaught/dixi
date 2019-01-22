@@ -1,0 +1,30 @@
+{"audioToWord.py":{"description":"Train a network for detecting which word has been said in an audio file","args":[
+	{"name":"source","nargs":"?","default":"synth"},
+	{"name":"--epochs","nargs":"?","default":"2000"},
+	{"name":"--arrs","nargs":"?","default":""},
+	{"name":"--notrainconv","nargs":"?","default":"no-opt"},
+	{"name":"--notraindense","nargs":"?","default":"no-opt"},
+	{"name":"--notrainclass","nargs":"?","default":"no-opt"},
+	{"name":"--nosave","nargs":"?","default":"no-opt"},
+	{"name":"--profile","nargs":"?","default":"no-opt"}]},
+"audioAndSpellingToWord.py":{"description":"Train a network for detecting which word has been said in an audio file and which word has been spelled","args":[
+	{"name":"source","nargs":"?","default":"synth"},
+	{"name":"--epochs","nargs":"?","default":"2000"},
+	{"name":"--arrs","nargs":"?","default":""},
+	{"name":"--notrainconv","nargs":"?","default":"no-opt"},
+	{"name":"--notraindense","nargs":"?","default":"no-opt"},
+	{"name":"--notrainclass","nargs":"?","default":"no-opt"},
+	{"name":"--notrainletterdense","nargs":"?","default":"no-opt"},
+	{"name":"--nosave","nargs":"?","default":"no-opt"},
+	{"name":"--profile","nargs":"?","default":"no-opt"}]},
+"spellingToVector.py":{"description":"Train a network to learn word vectors from their spelling","args":[
+	{"name":"source","nargs":"?","default":"modelvars/vecs-synth.json"},
+	{"name":"--epochs","nargs":"?","default":"10000"}]},
+"symbolsToVector.py":{"description":"Train a network to learn word vectors from their spelling","args":[
+	{"name":"source","nargs":"?","default":"modelvars/vecs-synth.json"},
+	{"name":"--epochs","nargs":"?","default":"500"}]},
+"synthVoices.py":{"description":"Generate audio files to train against","args":[
+	{"name":"subset","nargs":"?","default":"10000"}]},
+"tensorboardExporter.py":{"description":"Export a vecs-*.json for use in tensorboard","args":[
+	{"name":"vecs","nargs":"?","default":"modelvars/vecs-synth.json"}]}
+}
