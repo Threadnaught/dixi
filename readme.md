@@ -29,3 +29,7 @@ See the tensorboard output (open a web browser and go to localhost:6006);
 ```
 tensorboard --logdir=logs
 ```
+ ![](imgs/0.png)
+ ![](imgs/1.png)
+ ![](imgs/2.png)
+ ![](imgs/3.png)
