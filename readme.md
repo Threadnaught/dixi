@@ -10,6 +10,8 @@ tensorflow gpu must also be installed if you want training to finish before the 
 
 ## Running the model
 
+If you're in a hurry, I included an output log directory, so you can skip straight to Seeing the vectors.
+
 I hope you're using **python 2**. Clone the repo and generate the training data (it has to make 280,000 small audio clips, so this may take some time);
 ```
 git clone https://github.com/Threadnaught/dixi
@@ -22,6 +24,7 @@ Run the model (this step takes me about 15 hours, this model is very IO-bound);
 python phoneticVector.py
 ```
 
+## Seeing the vectors
 See the tensorboard output (open a web browser and go to localhost:6006);
 ```
 tensorboard --logdir=logs
