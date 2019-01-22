@@ -1,4 +1,4 @@
-#Dixi Phonetic Vectoriser
+# Dixi Phonetic Vectoriser
 
 A small ML library for audio, and a python file that uses it to create a phonetic vector space.
 
@@ -10,9 +10,9 @@ tensorflow gpu must also be installed if you want training to finish before the 
 
 ## Running the model
 
-Clone the repo and generate the training data (it has to make 280,000 small audio clips, so this may take some time);
+I hope you're using **python 2**. Clone the repo and generate the training data (it has to make 280,000 small audio clips, so this may take some time);
 ```
-git clone xxxx
+git clone https://github.com/Threadnaught/dixi
 cd dixi
 python synthVoices.py
 ```
