@@ -2,27 +2,6 @@ import json
 import bson
 import argparse
 import sys
-#JSON/ARGPARSE:
-def saveJson(name, vars):
-	with open(name, 'w') as outfile:
-		json.dump(vars, outfile)
-def loadJson(name):
-	with open(name, 'r') as infile:
-		return json.load(infile)
-def saveBson(name, vars):
-	with open(name, 'w') as outfile:
-		outfile.write(bson.dumps(vars))
-def loadBson(name):
-	with open(name, 'r') as infile:
-		return bson.loads(infile.read())
-argcfg = loadJson('args.json')
-args = []
-if sys.argv[0] in argcfg:
-	parser = argparse.ArgumentParser(description=argcfg[sys.argv[0]]['description'])
-	for a in argcfg[sys.argv[0]]['args']:
-		parser.add_argument(a['name'], nargs=a['nargs'], default=a['default'])
-	args = vars(parser.parse_args())
-#EVERYTHING ELSE: (import tensorflow after above to avoid annoying output when using --help)
 import tensorflow as tf
 import numpy as np
 from scipy.io import wavfile
@@ -31,6 +10,13 @@ mpl.use('Agg')
 import matplotlib.pyplot as plt
 import random
 from multiprocessing import Pool
+#JSON/ARGPARSE:
+def saveJson(name, vars):
+	with open(name, 'w') as outfile:
+		json.dump(vars, outfile)
+def loadJson(name):
+	with open(name, 'r') as infile:
+		return json.load(infile)
 #misc:
 def pinRandom():
 	random.seed(0)
